@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: none;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d1e5ff; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#642bff, #ff22e6); 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#5016ff, #b82bff); 
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 12%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: linear-gradient(to bottom, #191970, #856088);
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+}
+
+.logo:hover {
+    text-shadow: 0 0 50px white, 
+                 0 0 30px white;
+    transform: scale(2.0);
+}
+
+.navbar a {
+    font-size: 30px;
+    color: #856088;
+    font-weight: 500;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -3px;
+    left: 0;
+	background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Light tube animation */
+h5 {
+    font-size: 5em;
+    color: #0e3742;
+    position: relative;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    line-height: 0.90em;
+    outline: none;
+    animation: animate 15s linear infinite;
+}
+
+@keyframes animate {
+    0%, 18%, 20%, 50.1%, 90.1%, 92% {
+        color: #A0153E;
+		text-shadow: none;
+		color: #7E2553;
+        text-shadow: none;
+    } 
+    
+    18.1%, 20.1%, 80.1%, 1%, 2%, 90%, 100%, 100% {
+        color: #00224D;
+        text-shadow: 
+            0 0 10px #03bcf4,
+            0 0 20px #03bcf4,
+            0 0 30px #03bcf4,
+            0 0 40px #03bcf4,
+            0 0 50px #03bcf4,
+            0 0 60px #03bcf4;
+    }
+
+}
+
+/* Background */
+.home {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('1.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-origin: padding-box;
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+    position: relative;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    background-repeat: inherit;
+    background-attachment: inherit;
+    background-origin: inherit;
+    filter: blur(6px);
+    z-index: 0;
+}
+
+.home-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.home-content p {
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+
+.img-box {
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #fff;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.9);
+    position: relative;
+    z-index: 2;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    animation: text-animation 3s infinite alternate;
+}
+
+@keyframes text-animation {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid rgba(300, 99, 71, 0.8);
+    background-color: black;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    font-size: 20px;
+}
+
+.contact-info {
+    color: #fff;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    margin-top: 60px;
+}
+
+.social-media a {
+    color: #fff;
+    margin-left: 30px; 
+    font-size: 50px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #03bcf4;
+}
