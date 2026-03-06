@@ -138,7 +138,6 @@ body{
     grid-template-columns: auto auto auto;
     gap: 50px;
     justify-content: center;
-     
 }
         
 
@@ -191,23 +190,25 @@ body{
             margin: 10px;
             cursor: pointer;
             border-radius: 30px;
-            color: white;
+            color: rgb(255, 255, 255);
             border: 2px solid rgb(255, 255, 255);
             font-family: 'Quicksand_Light';
             font-size: 15px;
-        }
-
-        #Resume{
-            margin-right: 10px;
-        }
-
-        #Portfolio{
-            margin-left: 20px;
+            transition-duration: .3s;
         }
 
         .LeftContainer button:hover{
-            
+            background-color: white;
+            color: rgb(0, 0, 0);
+            border: 2px solid rgb(255, 255, 255);
+            font-weight: bold;
         }
+
+        .LeftContainer a {
+            text-decoration: none;
+        }
+
+        
 
 
         /* Left-Container */
@@ -253,6 +254,8 @@ footer img {
     align-items: left;
     display: flex;
 }
+
+
 /* Footer */
 
 
