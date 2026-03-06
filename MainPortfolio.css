@@ -1,0 +1,265 @@
+/* Fonts */
+@font-face {
+    font-family: 'Hummock';
+    src: url('Fonts/Hummock Regular.otf') format('opentype'),
+             url('Fonts/Hummock Regular.ttf') format('truetype');
+    
+}
+
+@font-face {
+    font-family: 'Luxnoleg';
+    src: url('Fonts/GreaterTheory.otf') format('opentype'),
+             url('Fonts/GreaterTheory.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'Quicksand_Light';
+    src: url('Fonts/Quicksand_Light.otf') format('opentype');
+            
+
+}
+
+@font-face {
+    font-family: 'ROTHEFIGHT';
+    src: url('Fonts/ROTHEFIGHT.otf') format('opentype');
+            
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url("Background/REwings.png");
+    background-size: cover;
+    margin: 0%;
+    padding: 0;
+    
+}
+
+
+
+/* Header/Navbar */
+.navbar {
+    font-family: 'Quicksand_Light';
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 30rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0 10px;
+}
+
+.navbar ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar .phoneNum {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+
+.navbar .phoneNum img {
+    width: 18px;
+    
+}
+
+.navbar li{
+    padding: 3px;
+    list-style-type: none;
+    
+}
+
+.navbar a {
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 10px 0;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    height: 2.5px;
+    background-color: white;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar a:hover {
+    color: #ffffff;
+}
+
+.phoneNum p{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Header/Navbar */
+
+
+
+
+
+
+
+
+/* MainContents */
+.container  {
+    display: flex;
+    margin: 20px;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
+    justify-content: center;
+     
+}
+        
+
+
+
+        /* Left-Container */
+        .LeftContainer {
+            width: 90rem;
+            max-width: 100rem;
+            height: 30rem;
+            margin: 1rem;
+            padding-top: 100px;
+            padding-left: 20px;
+            color: white;
+        }
+            
+                .LeftContainer h1{
+                    align-items: center;
+                    text-align: center;
+                    font-size: 70px;
+                    text-align: left;
+                    font-family: 'ROTHEFIGHT';
+                    letter-spacing: 10px;
+                    
+                }
+
+                .LeftContainer h2{
+                    align-items: left;
+                    text-align: left;
+                    font-family: 'Hummock' ;
+                    font-weight: bold;
+                    letter-spacing: 16px;
+                    font-size: 35px;
+                    text-align: left;
+                }
+
+                .LeftContainer h4 {
+                    align-items: left;
+                    text-align: left;
+                    font-family: 'Quicksand_Light';
+                    letter-spacing: 10px;
+                    font-size: 10px;
+                    text-align: left;
+                    padding-bottom: 29px;
+                }
+
+        .LeftContainer button {
+            background-color: transparent;
+            padding: 10px 32px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 30px;
+            color: white;
+            border: 2px solid rgb(255, 255, 255);
+            font-family: 'Quicksand_Light';
+            font-size: 15px;
+        }
+
+        #Resume{
+            margin-right: 10px;
+        }
+
+        #Portfolio{
+            margin-left: 20px;
+        }
+
+        .LeftContainer button:hover{
+            
+        }
+
+
+        /* Left-Container */
+
+
+
+/* MainContents */
+
+
+
+
+
+/* Footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    padding: 15px 30px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+footer .contacts {
+    display: flex;
+    gap: 1.5rem;
+    align-items: left;
+    cursor: pointer;
+    
+}
+
+footer img {
+    padding: 0;
+    margin: 0;
+    filter: invert(1);
+    width: 20px;
+    align-items: left;
+    display: flex;
+}
+/* Footer */
+
+
+/* PageResponsive */
+@media screen and (max-width:600px){
+    footer, header, article{
+        width: 100%;
+    }
+}
+/* PageResponsive */
