@@ -72,8 +72,8 @@ html, body{
 #AboutBG{
     background: linear-gradient(
         to bottom,
-        rgb(0,0,0) 0%,
-        rgb(10,10,10) 100%
+        rgb(0, 0, 0) 0%,
+        rgb(31, 31, 31) 100%
     );
 }
 /* ABOUT */
@@ -82,8 +82,8 @@ html, body{
 #ResumeBG{
     background: linear-gradient(
         to bottom,
-        rgb(10,10,10) 0%,
-        rgb(20,20,20) 100%
+        rgb(31, 31, 31) 0%,
+        rgb(49, 49, 49) 100%
     );
 }
 /* RESUME */
@@ -92,8 +92,8 @@ html, body{
 #PortfolioBG{
     background: linear-gradient(
         to bottom,
-        rgb(20,20,20) 0%,
-        rgb(35,35,35) 100%
+        rgb(49, 49, 49) 0%,
+        rgb(0, 0, 0) 100%
     );
 }
 /* PORTFOLIO */
@@ -186,6 +186,8 @@ html, body{
 /* Header/Navbar */
 
 
+
+
 /* MainContents */
 .Home-container,
 .About-container,
@@ -197,7 +199,7 @@ html, body{
     gap: 50px;
     justify-content: center;
 }
-        /* Left-Container */
+        /* Home-Left-Container */
         .Home-LeftContainer,
         .About-LeftContainer,
         .Resume-LeftContainer,
@@ -211,10 +213,7 @@ html, body{
             color: white;
         }
             
-                .Home-LeftContainer h1,
-                .About-LeftContainer h1,
-                .Resume-LeftContainer h1,
-                .Portofolio-LeftContainer h1{
+                .Home-LeftContainer h1{
                     align-items: center;
                     text-align: center;
                     font-size: 70px;
@@ -224,23 +223,17 @@ html, body{
                     font-weight: normal;
                 }
 
-                .Home-LeftContainer h2,
-                .About-LeftContainer h2,
-                .Resume-LeftContainer h2,
-                .Portofolio-LeftContainer h2{
+                .Home-LeftContainer h2{
                     align-items: left;
                     text-align: left;
-                    font-family: 'Hummock' ;
+                    font-family: 'Hummock';
                     font-weight: bold;
                     letter-spacing: 16px;
                     font-size: 35px;
                     text-align: left;
                 }
 
-                .Home-LeftContainer h4,
-                .About-LeftContainer h4,
-                .Resume-LeftContainer h4,
-                .Portofolio-LeftContainer h4 {
+                .Home-LeftContainer h4 {
                     align-items: left;
                     text-align: left;
                     font-family: 'Quicksand_Light';
@@ -276,12 +269,58 @@ html, body{
             text-decoration: none;
         }
 
-        .About-LeftContainer a{
+        /* Home-Left-Container */
+
+
+
+
+        /* About-Left-Container */
+        .About-LeftContainer h2{
+            font-family: 'Hummock';
+            font-size: 50px;
+            letter-spacing: 4px;
+            padding-bottom: 10px;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            text-decoration-thickness: 2px;
+        }
+
+        .About-LeftContainer h4{
+            padding-bottom: 90px;
+        }
+
+        .About-LeftContainer {
+            font-family: 'Quicksand_Light' ;
+            letter-spacing: 1px;
+            padding: 0;
+            margin: 0;
+            padding-top: 8rem;
+            font-size: 13px;
+            text-align: center;
+            padding-right: 12.5rem;
+        }
+
+        .About-LeftContainer p{
+            padding-left: 9rem;
+            padding-right: 9rem;
+        }
+
+        .About-LeftContainer h3{
+            padding: 100px;
             text-align: center;
         }
 
-        /* Left-Container */
-
+        .About-Profile-Pic-RightContainer img{
+            width: 350px;
+            height: auto;
+            border-radius: 100%;
+            position: relative;
+            right: 10rem;
+            top: 10rem;
+            
+        }
+        
+        /* About-Left-Container */
 
 
 /* MainContents */
@@ -328,7 +367,7 @@ footer img {
 
 /* PageResponsive */
 @media screen and (max-width:600px){
-    footer, header, article{
+    footer, header, section{
         width: 100%;
     }
 }
