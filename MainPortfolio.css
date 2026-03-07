@@ -81,11 +81,8 @@ html, body{
 
 /* RESUME */
 #ResumeBG{
-    background: linear-gradient(
-        to bottom,
-        rgb(31, 31, 31) 0%,
-        rgb(49, 49, 49) 100%
-    );
+     background-image: url('Background/RIPD.png');
+     background-size: cover;
 }
 /* RESUME */
 
@@ -279,7 +276,7 @@ html, body{
         .About-LeftContainer h2{
             font-family: 'Hummock';
             font-size: 50px;
-            letter-spacing: 4px;
+            letter-spacing: 15px;
             padding-bottom: 10px;
             text-decoration: underline;
             text-underline-offset: 10px;
@@ -288,6 +285,8 @@ html, body{
 
         .About-LeftContainer h4{
             padding-bottom: 90px;
+            letter-spacing: 2px;
+            font-size: 10px;
         }
 
         .About-LeftContainer {
@@ -304,6 +303,7 @@ html, body{
         .About-LeftContainer p{
             padding-left: 9rem;
             padding-right: 9rem;
+            letter-spacing: 3px;
         }
 
         .About-LeftContainer h3{
