@@ -74,25 +74,39 @@ html, body{
     background: linear-gradient(
         to bottom,
         rgb(0, 0, 0) 0%,
-        rgb(31, 31, 31) 100%
+        transparent
     );
+
+    
 }
 /* ABOUT */
 
 /* RESUME */
 #ResumeBG{
-     background-image: url('Background/RIPD.png');
-     background-size: cover;
+    background: linear-gradient(to top, transparent, rgb(0,0,0)),
+    linear-gradient(to bottom, rgba(116, 116, 116, 1), transparent),
+    url('Background/RIPD.png');
+    background-size: cover;
+    filter: blur(10px);
+     
+}
+
+#ResumeBG::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent, rgb(0, 0, 0));
+    z-index: 0;
 }
 /* RESUME */
 
 /* PORTFOLIO */
 #PortfolioBG{
-    background: linear-gradient(
-        to bottom,
-        rgb(49, 49, 49) 0%,
-        rgb(0, 0, 0) 100%
-    );
+    background: linear-gradient(to top, transparent, rgb(0,0,0)),
+    linear-gradient(to bottom, rgb(0, 0, 0), rgb(27, 27, 27));
 }
 /* PORTFOLIO */
 
@@ -120,19 +134,6 @@ html, body{
     display: flex;
     padding: 0;
     margin: 0;
-}
-
-.navbar .phoneNum {
-    display: flex;
-    align-items: center;
-    gap: 0.1rem;
-    color: rgb(0, 0, 0);
-    font-size: 50px;
-}
-
-.navbar .phoneNum img {
-    width: 18px;
-    margin: 3px;
 }
 
 .navbar li{
@@ -295,7 +296,7 @@ html, body{
             padding: 0;
             margin: 0;
             padding-top: 8rem;
-            font-size: 13px;
+            font-size: 11px;
             text-align: center;
             padding-right: 12.5rem;
         }
@@ -362,6 +363,17 @@ footer img {
     display: flex;
 }
 
+/* ensure phone icon lines up with number */
+footer .phoneNum {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* space between icon and text */
+}
+
+footer .phoneNum img {
+    width: 20px; /* match other icons */
+    flex-shrink: 0;
+}
 
 /* Footer */
 
