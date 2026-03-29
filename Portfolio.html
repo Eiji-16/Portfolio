@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <title>Item Logger</title>
+  
+<!--AQUINO, WRENZ AJ C.-->
+
+  <style>
+    body {
+      background-color: grey;
+    }
+    
+    input {
+      padding: 6px;
+      width: 200px;
+      margin-right: 8px;
+      border-radius: 10px;
+      border-style: none;
+    }
+
+    button {
+      padding: 6px 12px;
+      border-radius: 10px;
+      border-style: none;
+      cursor: pointer;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    
+
+  <h2>ITEM LOGGER</h2>
+
+  <input type="text" id="item-input" placeholder="Enter item name" />
+  <button onclick="logItem()">Log Item</button>
+
+  <div id="display"></div>
+
+  <script>
+
+    function logItem() {
+      let value = document.getElementById("item-input").value;
+      document.getElementById("display").innerHTML = "Logged: " + value;
+    }
+  </script>
+
 </body>
 </html>
